@@ -7,7 +7,8 @@ buttons.forEach( function(button){
 		const value=button.textContent;
 
 		if(value==="="){
-			boxContent=eval(boxContent);
+			boxContent = Function("return " + boxContent)();
+;
 		}
 		else if ( value==="C"){
 			boxContent="";
